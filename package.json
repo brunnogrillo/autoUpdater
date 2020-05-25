@@ -18,10 +18,7 @@
       "type": "distribution"
     },
     "publish": {
-      "provider": "github",
-      "token": "ee0d91a49a0e6a07429a408afd06629330872ab4",
-      "owner": "brunnogrillo",
-      "repo": "autoUpdater"
+      "provider": "github"
     }
   },
   "repository": {

@@ -1,9 +1,9 @@
 const { app, BrowserWindow } = require('electron')
 const { autoUpdater } = require("electron-updater")
-// const path = require('path')
+const path = require('path')
 
-// autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
-// console.log(path.join(__dirname, 'dev-app-update.yml'))
+autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
+console.log(path.join(__dirname, 'dev-app-update.yml'))
 
 let win
 
@@ -29,11 +29,11 @@ const createDefaultWindow = () => {
   return win
 }
 
-// Object.defineProperty(app, 'isPackaged', {
-//   get() {
-//     return true;
-//   }
-// });
+Object.defineProperty(app, 'isPackaged', {
+  get() {
+    return true;
+  }
+});
 
 app.on('ready', () => {
   

@@ -1,15 +1,15 @@
 const { app, BrowserWindow } = require('electron')
 const { autoUpdater } = require("electron-updater")
-const path = require('path')
+// const path = require('path')
 
-autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
-console.log(path.join(__dirname, 'dev-app-update.yml'))
+// autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
+// console.log(path.join(__dirname, 'dev-app-update.yml'))
 
 // autoUpdater.setFeedURL({
 //   provider: 'github',
 //   repo: 'https://github.com/brunnogrillo/autoUpdater.git',
 //   owner: 'brunnogrillo',
-//   private: true,
+//   private: false,
 //   token: '5d82f52e08a4b0ead71b3379a36f25eb787a9798'
 // })
 
@@ -26,7 +26,7 @@ const createDefaultWindow = () => {
     }
   })
 
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
@@ -37,11 +37,11 @@ const createDefaultWindow = () => {
   return win
 }
 
-Object.defineProperty(app, 'isPackaged', {
-  get() {
-    return true;
-  }
-});
+// Object.defineProperty(app, 'isPackaged', {
+//   get() {
+//     return true;
+//   }
+// });
 
 app.on('ready', () => {
   

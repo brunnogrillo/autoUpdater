@@ -5,14 +5,6 @@ const { autoUpdater } = require("electron-updater")
 // autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
 // console.log(path.join(__dirname, 'dev-app-update.yml'))
 
-// autoUpdater.setFeedURL({
-//   provider: 'github',
-//   repo: 'https://github.com/brunnogrillo/autoUpdater.git',
-//   owner: 'brunnogrillo',
-//   private: false,
-//   token: '5d82f52e08a4b0ead71b3379a36f25eb787a9798'
-// })
-
 let win
 
 const dispatch = (data) => {

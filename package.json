@@ -1,0 +1,36 @@
+{
+  "name": "auto-updater",
+  "version": "1.0.0",
+  "description": "Electron app auto updater",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunnogrillo/autoUpdater.git"
+  },
+  "author": "Brunno Grillo",
+  "devDependencies": {
+    "electron": "^8.0.2",
+    "electron-builder": "^22.3.2"
+  },
+  "build": {
+    "appId": "com.electron.autoupdater",
+    "productName": "AutoUpdater",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution"
+    },
+    "publish": [
+      "github"
+    ]
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.4"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "auto-updater",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Electron app auto updater",
   "main": "main.js",
   "scripts": {

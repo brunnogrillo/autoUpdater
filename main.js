@@ -69,12 +69,13 @@ autoUpdater.on('error', (err) => {
 })
 
 autoUpdater.on('download-progress', (progressObj) => {
-  // let log_message = "Download speed: " + progressObj.bytesPerSecond
-  // log_message = log_message + ' - Downloaded ' + progressObj.percent + '%'
-  // log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')'
-  // dispatch(log_message)
+  let log_message = "Download speed: " + progressObj.bytesPerSecond
+  log_message = log_message + ' - Downloaded ' + progressObj.percent + '%'
+  log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')'
+  dispatch(log_message)
 
-    win.webContents.send('download-progress', progressObj.percent)
+  win.webContents.send('size', log_message)
+  win.webContents.send('download-progress', progressObj.percent)
 
 })
 
